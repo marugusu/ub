@@ -1,0 +1,126 @@
+! Title: Eesti saitidele kohandatud filter / Estonian list for ad blockers
+! Homepage: https://github.com/marugusu/ub
+! Expires: 1 days
+! Version: 2026.08.20
+! License: CC0 1.0 Universal
+
+! =====================================
+! Globaalsed / üldised
+! =====================================
+##A[href*="http://pay4results24.eu"]
+##iframe[src*="cherrystatic.net"]
+##iframe[src*="date.elu24.ee"]
+##IFRAME[src*="sale24.ee"]
+##iframe[src*="static.chilli.ee"]
+##iframe[src*="superdeal.ee"]
+
+! =====================================
+! Delfi (kroonika, sport, epl jne)
+! =====================================
+delfi.ee###cookie_ribbon
+delfi.ee##.ad-block-layer
+delfi.ee##.ad-block-layer-content
+delfi.ee##.C-ad-block-layer
+delfi.ee##.C-banner
+delfi.ee##.md-banner-placement
+delfi.ee##.rembi
+delfi.ee##.row.row-space-around.ad-container
+delfi.ee##.article-ad
+delfi.ee##[data-testid="ad-container"]
+delfi.ee,epl.ee##.adblock-notice
+epl.delfi.ee##a[href*="EPL_suur"]
+kroonika.ee##div.ads_right_column_adjust
+lpdigileht.epl.ee,ajaleht.ekspress.ee##a[class~=player][href*="reklaam"]
+
+! =====================================
+! Postimees & Grupp
+! =====================================
+elu24.ee,postimees.ee##.adblock-notif
+kanal2.postimees.ee##.cookieConsent
+kanal2.postimees.ee##.top-space
+@@||emediate.se$third-party,domain=tartupostimees.ee|postimees.ee
+
+! =====================================
+! Geenius & Äripäev
+! =====================================
+aripaev.ee##div[class*="banner-placeholder"]
+geenius.ee##.is-sticky.advads-close.advads-background-click-close.advads-has-background.rklm-geenius-layer-onload.advads-duration-100.advads-effect-fadein.advads-effect.rklm-geenius-layer.rklm-geenius-layer-desktop
+geenius.ee##a[href*="delivery/ck.php"]
+
+! =====================================
+! Kuulutused & Muud Eesti portaalid
+! =====================================
+1182.ee###content-box-right
+1a.ee##.ad-box
+accelerista.com##.top-bar-content
+accelerista.com##div[id^="bsa-block"]
+annaabi.ee###freefilePopup_background
+annaabi.ee###freefilePopup_wrapper
+annaabi.ee##.noticeBoxAbs
+auto24.ee##DIV.adzones
+auto24.ee##DIV[id*="_panels_kb_ad"]
+auto24.ee,motors24.ee,mangukoobas.lahendus.ee##DIV.banner
+biker.ee##.noscriptcssresponsive.noscriptcss.panel
+biker.ee##.viewtopicads.panel
+cherry.ee##a[href*=site_banner]
+director.ee##div[itemtype="https://schema.org/WPAdBlock"]
+ehitusfoorum.com##.panel.bg3 > div:nth-child(1) > div:nth-child(2) > center:nth-child(1)
+ehuumor.ee###modal
+hinnavaatlus.ee###rek160
+hinnavaatlus.ee###rek728
+hinnavaatlus.ee##.banner-single
+hinnavaatlus.ee##.header-banner
+hinnavaatlus.ee##A[href*="delivery/ck.php"]
+hinnavaatlus.ee##div.col-c-1-4
+hinnavaatlus.ee##DIV.rek585
+hinnavaatlus.ee##DIV.specials
+hinnavaatlus.ee##DIV[class=tb]
+hinnavaatlus.ee##div[id^="ox_"]
+hinnavaatlus.ee##script[src*="delivery/fl.js"]
+ilm.ee###taust
+ilm.ee##.sideboxads
+ilm.ee##.thisad
+ilm.ee#$#.trim > .container{margin-top:0px !important}
+kalale.ee##DIV[class$="top-reklaam"]
+kalale.ee##DIV[class*="advert-box"]
+kalale.ee/upload/images/reklaam/*
+kaup24.ee###titleBannerWidget
+kaup24.ee##a[href*="www/delivery/ck.php"]
+kaup24.ee##div[id*=idAdbill]
+kava.ee###ad_channelgroup
+kava.ee###ad_header_1000x120
+kava.ee###rightsideBanner
+kava.ee##DIV.ad_container
+kava.ee##DIV.overlay2
+kava.ee##DIV[class*=kava_ad_]
+kava.ee##IFRAME[id="frmleftcolads"]
+kava.ee##IFRAME[src^="http://www.facebook.com/plugins/login_button.php"]
+kava.ee##iframe[src^="https://www.cvkeskus.ee"]
+kuldnebors.ee###auto24
+kuldnebors.ee##DIV[id*="dBannerLeft"]
+kuldnebors.ee##DIV[id*="dBannerTextInPostView"]
+kuldnebors.ee##DIV[id*="dBannerTower"]
+kuldnebors.ee##DIV[id="dBannerTop"]
+kuldnebors.ee##DIV[id^="dBannerPromo"]
+kuldnebors.ee##TD[class*="banner_fp_box"]
+kuldnebors.ee##TD[class*="banner_mp_box"]
+kv.ee###header_banner
+kv.ee##DIV.banner_container_1
+lounaeestlane.ee###rt-drawer
+lounaeestlane.ee##.bannergroup
+lounaeestlane.ee##.header-banners
+lounaeestlane.ee##.widget_sp_image-image-link
+lounaeestlane.ee/*/banners/*
+
+! =====================================
+! TV3 / Go3
+! =====================================
+@@||fwmrm.net^$domain=tv3play.tv3.ee
+@@||imasdk.googleapis.com^$script,domain=duoplay.ee
+@@||mssl.fwmrm.net/libs/adm/*$script,domain=play.tv3.ee
+@@||newrelic.com^$domain=tv3play.tv3.ee
+@@||play.tv3.ee/static/scripts/ima3.js$script,domain=play.tv3.ee
+@@||play.tv3.ee/static/scripts/trackdb/events.gif$image,domain=play.tv3.ee
+@@||static.go3.tv/file/go3/resources/scripts/tv3play/onetrust/lv/onetrust.html$xhr,domain=play.tv3.ee
+@@||tv3play.tv3.ee/ad/banner/*
+cdn.playapi.mtgx.tv/*/banners/*
