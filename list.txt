@@ -1,7 +1,7 @@
 ! Title: Eesti saitidele kohandatud filter / Estonian list for ad blockers
 ! Homepage: https://github.com/marugusu/ub
 ! Expires: 1 days
-! Version: 2026.08.20.4
+! Version: 2026.08.20.5
 ! License: CC0 1.0 Universal
 
 ! =====================================
@@ -17,21 +17,25 @@
 ! =====================================
 ! Delfi (kroonika, sport, epl, arileht jne)
 ! =====================================
-! Keela üldised (EasyList) peitmisreeglid, mis lõhuvad Delfi esilehe artiklite paigutust
+! 1. Keela EasyListi üldised peitmisreeglid, mis lõhuvad Delfi esilehe artiklite paigutust
 @@||delfi.ee^$generichide
 @@||delfi.ee^$ghide
 
-! Luba Delfi enda sisu- ja uudistevoo API-d
+! 2. Luba Delfi enda skriptid ja sisu-API-d (mida EasyList/EasyPrivacy vaikimisi blokeerivad)
+@@||static.delfi.ee^$script,domain=delfi.ee
 @@||content.api.delfi.ee^$domain=delfi.ee
 @@||portal-feeds.api.delfi.ee^$domain=delfi.ee
 @@||media.api.delfi.ee^$domain=delfi.ee
 @@||portal-companion.api.delfi.ee^$domain=delfi.ee
+@@||customer.api.delfi.ee^$domain=delfi.ee
+@@||piano-worker.api.delfi.ee^$domain=delfi.ee
+@@||ip-access.api.delfi.ee^$domain=delfi.ee
 
-! Automaatne jälgimisest keeldumine (Keelab analüütika, profiilimise ja asukoha; lubab ainult lehe toimimiseks vajaliku)
+! 3. Automaatne jälgimisest keeldumine (Keelab analüütika, profiilimise ja asukoha; lubab ainult lehe toimimiseks vajaliku)
 delfi.ee##+js(set-cookie, consent, %7B%22functional%22%3A%7B%22consent%22%3Atrue%7D%2C%22analytical%22%3A%7B%22consent%22%3Afalse%7D%2C%22personalization%22%3A%7B%22consent%22%3Afalse%7D%2C%22geolocation%22%3A%7B%22consent%22%3Afalse%7D%2C%22other%22%3A%7B%22consent%22%3Afalse%7D%7D)
 delfi.ee##+js(trusted-set-cookie, consent, %7B%22functional%22%3A%7B%22consent%22%3Atrue%7D%2C%22analytical%22%3A%7B%22consent%22%3Afalse%7D%2C%22personalization%22%3A%7B%22consent%22%3Afalse%7D%2C%22geolocation%22%3A%7B%22consent%22%3Afalse%7D%2C%22other%22%3A%7B%22consent%22%3Afalse%7D%7D)
 
-! Reklaamikonteinerid ja bännerid (spetsiifilised, ei puutu artiklite konteinereid)
+! 4. Reklaamikonteinerid ja bännerid (ainult konkreetsed reklaamid, ei puutu artikleid)
 delfi.ee##.ad-block-layer
 delfi.ee##.ad-block-layer-content
 delfi.ee##.C-ad-block-layer
