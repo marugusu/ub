@@ -1,7 +1,7 @@
 ! Title: Eesti saitidele kohandatud filter / Estonian list for ad blockers
 ! Homepage: https://github.com/marugusu/ub
 ! Expires: 1 days
-! Version: 2026.08.20.2
+! Version: 2026.08.20.3
 ! License: CC0 1.0 Universal
 
 ! =====================================
@@ -17,6 +17,10 @@
 ! =====================================
 ! Delfi (kroonika, sport, epl jne)
 ! =====================================
+! Automaatne jälgimisest keeldumine (Keelab analüütika, profiilimise ja asukoha; lubab ainult lehe toimimiseks vajaliku)
+delfi.ee##+js(set-cookie, consent, %7B%22functional%22%3A%7B%22consent%22%3Atrue%7D%2C%22analytical%22%3A%7B%22consent%22%3Afalse%7D%2C%22personalization%22%3A%7B%22consent%22%3Afalse%7D%2C%22geolocation%22%3A%7B%22consent%22%3Afalse%7D%2C%22other%22%3A%7B%22consent%22%3Afalse%7D%7D)
+delfi.ee##+js(trusted-set-cookie, consent, %7B%22functional%22%3A%7B%22consent%22%3Atrue%7D%2C%22analytical%22%3A%7B%22consent%22%3Afalse%7D%2C%22personalization%22%3A%7B%22consent%22%3Afalse%7D%2C%22geolocation%22%3A%7B%22consent%22%3Afalse%7D%2C%22other%22%3A%7B%22consent%22%3Afalse%7D%7D)
+
 ! Reklaamikonteinerid ja bännerid
 delfi.ee##.ad-block-layer
 delfi.ee##.ad-block-layer-content
@@ -40,6 +44,7 @@ lpdigileht.epl.ee,ajaleht.ekspress.ee##a[class~=player][href*="reklaam"]
 elu24.ee,postimees.ee##.adblock-notif
 kanal2.postimees.ee##.cookieConsent
 kanal2.postimees.ee##.top-space
+postimees.ee##body:style(overflow: auto !important;)
 @@||emediate.se$third-party,domain=tartupostimees.ee|postimees.ee
 
 ! =====================================
